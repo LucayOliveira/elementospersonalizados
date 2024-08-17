@@ -1,0 +1,76 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 2rem;
+}
+
+section {
+  padding: 6.1rem;
+}
+
+.acordeao {
+  display: flex;
+  flex-flow: column;
+  gap: 1.6rem;
+
+  & .item {
+    display: flex;
+    flex-flow: column;
+    gap: 0rem;
+    box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.2);
+    border-radius: 3.5rem;
+
+    &.aberto {
+      & .conteudo {
+        padding: 1rem;
+        display: flex;
+        flex-flow: column;
+        gap: 1.6rem;
+        text-align: justify;
+        background-color: #000d3cee;
+        color: #ffffffff;
+        border-bottom-left-radius: 3.5rem;
+        border-bottom-right-radius: 3.5rem;
+      }
+
+      & .cabecalho {
+        background-color: #000d3c;
+        color: #ffffffff;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+
+        &::after {
+          content: "\25B2";
+        }
+      }
+    }
+
+    & .cabecalho {
+      display: flex;
+      justify-content: space-between;
+      padding: 2rem 3.12rem;
+      background-color: #ffffffff;
+      border-radius: 3.5rem;
+      font-weight: 700;
+      font-size: 1.92rem;
+      font-family: "Roboto";
+      cursor: pointer;
+
+      &::after {
+        content: "\25BC";
+      }
+    }
+
+    & .conteudo {
+      display: none;
+    }
+  }
+}
